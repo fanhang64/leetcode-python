@@ -65,7 +65,8 @@ def main():
     s = Solution()
     # res = s.removeElement([3,2,2,3], 3)
     res = s.removeElement([0,1,2,2,3,0,4,2], 2)  # 01230422
-    res = s.removeElement([],1)
+    res = s.removeElement([1], 1)
+    # res = s.removeElement([],1)
     print(res)
 
 
