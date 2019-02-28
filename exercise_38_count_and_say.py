@@ -44,6 +44,26 @@ class Solution:
 
 
 class Solution:
+    def countAndSay(self, n: int) -> str:  # 1211   # 111221
+        res = '1'
+        result = ''
+        for x in range(1, n):
+            result = ''
+            ch = res[0]
+            count = 0
+            for i in range(len(res)):
+                if ch == res[i]:
+                    count += 1
+                else:
+                    result = result + str(count) + ch
+                    count = 1
+                    ch = res[i]
+            result = result + str(count) + ch
+            res = result
+        return res
+
+
+class Solution:
     def countAndSay(self, n: int) -> str:
         result = "1"
         for i in range(1, n):
